@@ -1,0 +1,45 @@
+$container-width: 1480px;
+$container-padding: 3rem;
+
+@mixin container {
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: $container-padding;
+	padding-right: $container-padding;
+	max-width: $container-width;
+	margin: 0 auto;
+}
+
+@mixin readable-width {
+	width: 100%;
+	max-width: 90rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin font-size($desktop-size: 1.5em, $tablet-size: 1.25em, $phone-size: 1em) {
+
+	font-size: $desktop-size;
+	line-height: 1.25em;
+
+	@include tablet-break {
+		font-size: $tablet-size;
+	}
+
+	@include phone-break {
+		font-size: $phone-size;
+	}
+}
+
+@mixin responsive-font($min, $max, $minScreen, $maxScreen) {
+	font-size: #{$min}px;
+
+	@media (max-width: #{$maxScreen}px) and (min-width: #{$minScreen}px) {
+		font-size: calc(#{$min}px + (#{$max} - #{$min}) * (100vw - #{$minScreen}px) / (#{$maxScreen} - #{$minScreen}));
+	}
+
+	@media (min-width: #{$maxScreen}px) {
+		font-size: #{$max}px;
+	}
+
+}

@@ -1,0 +1,47 @@
+.horizontal-layout {
+    width: 100vw;
+    background: black;
+    display: flex;
+
+    &--seven-inch {
+        // sized for http://a.co/4m4GJda
+        //16:9 ratio
+        height: 56vw;
+    }
+
+    & > * {
+        margin-right: 1rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .main {
+        display: flex;
+
+        .content {
+            height: 100%;
+            overflow: scroll;
+            padding: 1.5rem;
+        }
+    }
+}
+
+.rounded {
+    padding: 1rem;
+
+    & > * {
+        overflow: hidden;
+
+        &:first-child {
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+
+        &:last-child {
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+    }
+}

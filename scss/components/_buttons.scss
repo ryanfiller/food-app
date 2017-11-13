@@ -1,0 +1,70 @@
+.buttons { //buttons all should have spans inside
+    display: flex;
+
+    &--vertical {
+        height: 100%;
+        flex-direction: column;
+        width: 33%;
+        max-width: 300px;
+
+        .button {
+            margin-bottom: .5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .button {
+        flex: 1;
+    }
+}
+
+.button {
+    border: none;
+    position: relative;
+    @include font-buttons;
+    text-align: center;
+    padding: .5em 1em;
+    background: none;
+    color: $color-blue;
+    transition: $transition;
+
+    &--touch {
+        min-height: 50px;
+        min-width: 50px;
+    }
+
+    & > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    span {
+        color: $color-white;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        background-color: currentColor;
+        opacity: .5;
+        z-index: 1;
+        transition: $transition;
+    }
+
+    &:hover, &:active, &:focus, &.active {
+        outline: none;
+        cursor: pointer;
+        &:after {
+            opacity: .75;
+        }
+    }
+
+    &:focus, &.active {
+        color: $color-orange;
+    }
+}
