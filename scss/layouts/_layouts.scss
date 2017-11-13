@@ -1,13 +1,11 @@
-.horizontal-layout {
+.app {
     width: 100vw;
+    height: 100vh;
+}
+
+.horizontal-layout {
     background: black;
     display: flex;
-
-    &--seven-inch {
-        // sized for http://a.co/4m4GJda
-        //16:9 ratio
-        height: 56vw;
-    }
 
     & > * {
         margin-right: 1rem;

@@ -404,13 +404,12 @@ body {
   font-size: 1.25rem;
   line-height: 1.25em; }
 
-.app {
-  width: 100vw;
-  height: 100vh; }
-
 .horizontal-layout {
+  width: 100vw;
   background: black;
   display: flex; }
+  .horizontal-layout--seven-inch {
+    height: 56vw; }
   .horizontal-layout > * {
     margin-right: 1rem; }
     .horizontal-layout > *:last-child {
