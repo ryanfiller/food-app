@@ -444,6 +444,13 @@ body {
       margin-bottom: .5rem; }
       .buttons--vertical .button:last-child {
         margin-bottom: 0; }
+  .buttons--rotated .button {
+    position: relative; }
+    .buttons--rotated .button span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%) rotate(-90deg); }
   .buttons .button {
     flex: 1; }
 

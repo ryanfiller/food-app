@@ -4,7 +4,7 @@ class NavButtons extends React.Component {
 
     render() {
 
-        return <nav className="buttons buttons--vertical">
+        return <nav className="buttons buttons--vertical buttons--rotated">
             <button className="button button--touch" type="button" name="button">
                 <span>Ingredients</span>
             </button>
