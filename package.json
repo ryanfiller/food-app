@@ -1,0 +1,24 @@
+{
+  "name": "electron-with-create-react-app",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "electron": "^1.4.14",
+    "react-scripts": "0.8.5"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "main": "src/electron.js",
+  "scripts": {
+    "start": "react-scripts start & gulp",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron ."
+  }
+}
