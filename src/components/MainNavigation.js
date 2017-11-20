@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Button from './Buttons';
+import Button from './Button';
 
 class MainNavigation extends React.Component {
 

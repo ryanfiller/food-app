@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './app.css';
 
+
+import { Tabs, TabLink, TabContent } from './components/tabs';
+
 import MainNavigation from './components/MainNavigation';
 
 var mainNav = [
@@ -43,11 +46,22 @@ class App extends Component {
                 </button>
             </div>
 
-              <main className="main">
-                  <div className="content">
-                      Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
-                  </div>
-              </main>
+            <main className="main">
+                <div className="content">
+                    <p>
+                        Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
+                    </p>
+                    <Tabs>
+                        <TabLink to="tab1">Tab1</TabLink>
+                        <TabLink to="tab2">Tab2</TabLink>
+                        <TabLink to="tab3">Tab3</TabLink>
+
+                        <TabContent for="tab1">/* content for tab #1 */</TabContent>
+                        <TabContent for="tab2">/* content for tab #2 */</TabContent>
+                        <TabContent for="tab3">/* content for tab #3 */</TabContent>
+                    </Tabs>
+                </div>
+            </main>
           </div>
     );
   }
