@@ -8,9 +8,9 @@ class MainNavigation extends React.Component {
 
         return <nav className="buttons buttons--vertical buttons--rotated">
 
-            {this.props.navList.map(function(navButton) {
+            {this.props.navList.map(function(button) {
                 return (
-                    <Button name={navButton.name} />
+                    <Button name={button.name} />
                 );
             })}
         </nav>
