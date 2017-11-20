@@ -2,13 +2,19 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './app.css';
 
-import NavButtons from './components/NavButtons';
+import MainNavigation from './components/MainNavigation';
+
+var mainNav = [
+    { 'id': 1, 'name': 'Ingredients', },
+    { 'id': 2, 'name': 'Recipes' },
+    { 'id': 3, 'name': 'Timers' }
+];
 
 class App extends Component {
   render() {
     return (
         <div className="app horizontal-layout rounded">
-            <NavButtons/>
+            <MainNavigation navList={mainNav}/>
 
             <div className="buttons buttons--vertical">
                 <button className="button button--touch" type="button" name="button">
