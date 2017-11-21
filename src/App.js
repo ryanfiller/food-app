@@ -6,6 +6,7 @@ import './app.css';
 import { Tabs, TabLink, TabContent } from './components/tabs';
 
 import MainNavigation from './components/MainNavigation';
+import Button from './components/Button';
 
 var mainNav = [
     { 'id': 1, 'name': 'Ingredients', },
@@ -52,7 +53,7 @@ class App extends Component {
                         Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.
                     </p>
                     <Tabs>
-                        <TabLink to="tab1">Tab1</TabLink>
+                        <TabLink to="tab1"><Button name="test button" /></TabLink>
                         <TabLink to="tab2">Tab2</TabLink>
                         <TabLink to="tab3">Tab3</TabLink>
 
