@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './app.css';
 
 import MainNavigation from './components/MainNavigation';
 

@@ -3,7 +3,7 @@ var sass = require('gulp-sass');
 // var browserSync = require('browser-sync');
 
 gulp.task('sass', function () {
-    gulp.src('scss/app.scss')
+    gulp.src('scss/index.scss')
         .pipe(sass({includePaths: ['scss']}))
         .pipe(gulp.dest('src'));
 });
